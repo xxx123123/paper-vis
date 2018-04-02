@@ -1,0 +1,2 @@
+,rule,Def,support1,confidence1,lift1,support2,confidence2,lift2,support3,confidence3,lift3,support4,confidence4,lift4,support5,confidence5,lift5,support6,confidence6,lift6,support7,confidence7,lift7
+150,N2->I4,numfatal=2->injury=Fatal Injury (K),0.057876979,0.5382139979999999,1.21200382,,,,,,,,,,0.050290135,0.577065351,1.2701443140000002,,,,0.053492673,0.541007194,1.233654361

@@ -1,0 +1,1914 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="d3.v4.js"></script>
+<script type="text/javascript" src="main.js"></script>
+ <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+   <script src="//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+   <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<style type="text/css">
+ body,html{width: 100%;height: 100%;font-size: 18px;font-family: "Times";}
+/*.container {
+   padding-right: 15px;
+   padding-left: 10px;
+   margin-right: auto;
+   margin-left: auto;
+   margin-top:5px;
+   margin-bottom: 0px;
+}*/
+#OverView{
+      height: 620px;
+      background-color: white;
+      border: 0px solid black;
+      border-radius: 6px;
+       /*overflow-y: scroll;*/
+      }
+.axis_right {
+   font-size: 15px;
+}
+#topMiddle{
+      height: 600px;
+      background-color: white;
+      border: 0px solid black;
+      border-radius: 6px;
+      }
+#circlegroup{
+      /*position: relative;*/
+      height: 600px;
+      background-color: white;
+      border:0px solid black;
+      border-radius: 6px;
+      text-align: center;
+    }
+#bar{
+      /*margin-top: 90px; */
+     cursor: pointer;
+      height: 360px;
+      background-color: white;
+      border:0px solid black;
+      border-radius: 5px;
+      text-align: center;
+ }
+ #tab{
+     cursor: pointer;
+      height: 600px;
+      background-color: white;
+      border:0px solid black;
+      border-radius: 5px;
+      text-align: center;
+   /*   margin-bottom: 10px;
+       margin-right: 0px;*/
+      
+ }
+ #right_down{
+      /*margin-top: 90px; */
+      cursor: pointer;
+      background-color: white;
+      height: 400px;
+      border:0px solid black;
+      border-radius: 5px;
+      text-align: center;
+      margin-bottom: 10px;
+     
+ }
+/*#barSort{
+   position: absolute;
+    margin-left: 975px;
+     margin-top: 50px; 
+     width: 100px;
+    display: inline-block;
+}*/
+.control-group1 {
+  position: absolute;
+  width: 300px;
+  margin-left: 30px;
+  margin-top: 0px; 
+  display: inline-block;
+  
+}
+.control-group1 p{
+  margin-bottom:1px;
+}
+.text_date1{
+    font-size:11px;
+    }
+.cells path {
+  fill: none;
+  pointer-events: all;
+   cursor: pointer;
+}
+
+#circlrdivRegion{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 700px;
+    height: 600px;
+}
+.itemsetrecgroup {}
+.balltiptxt{       
+            font-family:Times;  
+            font-size:15px;  
+            width:200px;  
+            height:auto;  
+            position:absolute;   
+            text-align:center;  
+            border-style:solid;  
+            border-width:1px;  
+            background-color:white;  
+            border-radius:5px;               
+}
+.riballtiptxt{       
+            font-family:Times;  
+            font-size:15px;  
+            width:300px;  
+            height:auto;  
+            position:absolute;   
+            text-align:center;  
+            border-style:solid;  
+            border-width:1px;  
+            background-color:white;  
+            border-radius:5px;               
+}
+.cballtiptxt{       
+            font-family:Times;  
+            font-size:15px;  
+            width:500px;  
+            height:auto;  
+            position:absolute;   
+            text-align:center;  
+            border-style:solid;  
+            border-width:1px;  
+            background-color:white;  
+            border-radius:5px;               
+}
+ .righttoptooltip {
+        position: absolute;
+        width: 200px;
+        height: auto;
+        font-family: Times;
+        font-size: 14px;
+        text-align: center;
+        border-style: solid;
+        border-width: 1px;
+        background-color: white;
+        border-radius: 5px;
+    }
+#drawxaxis{
+    width: 540px;
+    height: 50px;
+
+}
+#drawxaxisRecord
+{
+    width: 480px;
+    height: 50px;
+
+}
+ .axis path,
+ .axis line {
+        fill: none;
+        stroke: black;
+        shape-rendering: crispEdges;
+      }
+ .axis text {
+                font-family: Times;
+                font-size: 15px;
+            }
+#right_tempt {
+    margin:0 auto;
+   border: 0px solid black;
+     width: 467px;
+     height: 600px;
+     overflow-y: auto;
+    
+}
+#right_tempt table{
+/*  margin-left :18px;
+  margin-top:  10px;*/
+/*  width: 626;
+  height:480;*/
+  border: 0px solid black;
+   font: 12px sans-serif ;
+   cursor: pointer;  
+   
+}
+/*#right_tempt table th{
+  font-weight: bold;
+   text-align: right;
+   padding-right: 6px;
+   width: 161px;
+}*/
+table {
+  /*border-collapse: collapse;*/
+   font: 12px sans-serif ;
+   border: 0px solid black;
+   border-radius:5px;
+   cursor: pointer;                 
+}
+
+/*table th {
+   font-weight: bold;
+   text-align: right;
+   padding-right: 6px;
+   width: 161px;
+}*/
+
+tbody tr:first-child td {
+  padding-top: 2px;
+}
+tbody td {
+  padding: 0;
+}
+.col-md-12:first-child {
+  height:700px;
+}
+.col-md-2 .col-md-4 .col-md-6 {
+  float: left;     
+  position: relative;
+  min-height: 1px;
+  margin-bottom: 0px;
+  padding:0px;
+  /*box-shadow: inset 1px -1px 1px #444,inset -1px 1px 1px #444;*/
+}
+/*<!-- .col-md-4{ -->
+   <!-- height: 700px; -->
+  <!-- margin: 0px; -->
+  <!-- padding:0px; -->
+<!-- } -->*/
+/*.col-md-8 {
+  float: left;
+  position: relative;
+  margin: 0px;
+  padding:0px;
+}*/
+/*.col-md-8 > .col-md-12:first-child  {
+  height: 400px;
+  margin-bottom:10px;
+}
+.col-md-8 > .col-md-12:nth-child(2){
+  height: 500px;
+  margin-bottom:10px;
+}*/
+tbody tr:hover circle {
+  fill: orange;
+}
+#left_down{
+width:240px;
+display:block;
+margin-left:auto;
+overflow-y: hidden;
+margin-right:auto;
+ cursor: pointer;
+}
+#txt {
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  margin-left: 50px;
+  margin-top: 30px; 
+  display: inline-block;
+}
+ rect.bordered {
+        stroke: #E6E6E6;
+        stroke-width:2px;   
+      }
+
+      text.mono {
+        font-size: 20px;
+        font-family: Times;
+        fill: #aaa;
+      }
+
+      text.axis-workweek {
+        fill: #000;
+      }
+
+      text.axis-worktime {
+        fill: #000;
+      }
+input[type=range]:before { content: attr(min); padding-right: 5px; }
+input[type=range]:after { content: attr(max); padding-left: 5px;}
+
+.kbackground {
+  fill: #eee;
+}
+
+fline {
+  stroke: #fff;
+}
+
+text.active {
+  fill: green;
+}
+text.rcactive {
+  fill:green;
+}
+.row text{
+  font-size: 11px;
+}
+.column text{
+  font-size: 11px;
+}
+.Sort-cbx {
+    margin-top: 5px; 
+     font-size: 12px; 
+     /*margin-right: 30px; */
+  float:right;
+}
+#sty{
+    width: 500px;
+    height: 30px;
+    text-align: left;
+}
+#sty1{
+    width: 180px;
+    height: 50px;
+     text-align: center;
+     position: absolute;
+}
+#ItemOrder1 {margin-left:30px; }
+#ItemOrder2 {margin-left:60px; }
+#ItemOrder3 {margin-left:50px; }
+#ItemOrder4 {margin-left:60px; }
+#ItemOrder5 {margin-left:60px; }
+#ItemOrder6 {margin-left:60px; }
+#ItemOrder7 {margin-left:60px; }
+/*#ItemLengthOrder{margin-left:100px;margin-top:20px;}*/
+</style>
+<title>关联规则可视化</title>
+</head>
+ <body>
+   <div class="container">
+     <div class="col-md-12">
+           <div class="col-md-9">
+                <div class="col-md-6">
+            <div id="OverView">
+            <div style="border-radius: 6px; background-color:#ABABAB;">
+                  <A style="color:white;text-align: center;"><h2> Rule Overview</h2></A>
+                  </div> 
+              <aside style="margin-left:180px;position: absolute;">
+ <P class="Sort-cbx" style="float: left;"><b>Rules to Display: &nbsp;&nbsp;&nbsp;</b><INPUT id="cbx_item_set_2" type="checkbox" checked="checked">                 
+  <LABEL class="cbxlabel" for="cbx_item_set_2">2-items  &nbsp;&nbsp;&nbsp;</LABEL>             
+  </P>
+
+  <P class="Sort-cbx" style="float: left;"><INPUT id="cbx_item_set_3" type="checkbox" checked="checked">                 
+  <LABEL class="cbxlabel" for="cbx_item_set_3"> 3-items  &nbsp;&nbsp;&nbsp; </LABEL>             
+  </P>
+  <P class="Sort-cbx" style="float: left;"><INPUT id="cbx_item_set_4" type="checkbox" checked="checked">                 
+  <LABEL class="cbxlabel" for="cbx_item_set_4"> 4-items &nbsp;&nbsp;&nbsp;</LABEL>             
+  </P>
+
+  <P class="Sort-cbx" style="float: left;"><INPUT id="cbx_item_set_5" type="checkbox" checked="checked">                 
+  <LABEL class="cbxlabel" for="cbx_item_set_5"> 5-items &nbsp;&nbsp;&nbsp; </LABEL> 
+  </P>
+
+  <P class="Sort-cbx" style="float: left;"><INPUT id="cbx_item_set_6" type="checkbox" checked="checked">                 
+  <LABEL class="cbxlabel" for="cbx_item_set_6"> 6-items &nbsp;&nbsp;&nbsp;</LABEL> 
+  </P>
+  </aside>
+                  <div >
+                 <ul class="nav nav-tabs" >
+                <li class="active"><a class="atab" href="#fruleNode1" data-toggle="tab" style="font-size:12px;background-color:#ccc;"><b>Matrix</b></a></li>
+                <li><a class="btab" href="#fruleNode2" data-toggle="tab" style="font-size:12px;background-color:#ccc;" ><b>Node-link</b> </a></li>
+                 </ul>
+                
+                </div>
+				
+            
+             <div class="tab-pane active" id="fruleNode1"> <acontent></acontent> </div>
+                 
+			<div  class="tab-pane " id="fruleNode2"> <bcontent></bcontent> </div>
+            
+			</div>
+           </div>
+            
+            
+                <div class="col-md-6">
+                 <div id="circlegroup">
+                    <div style="border-radius: 6px; background-color: #ABABAB;">
+                         <A style="color:white;text-align: center;line-height: 40px;"><h2>Dynamic Rules</h2></A>  
+                    </div> 
+                    
+                   <div id="sty" style="margin-left: 187px; position: absolute;">
+                 <select id="ItemOrder1" class="selectpicker btn-default" style="width: 5px;height: 5px;" onchange="sort_function1()">
+                     <option value="support">  <span class="caret"></span></option>
+                    <option value="1"> <span class="glyphicon glyphicon-arrow-up"></span>by support</option>
+                    <option value="2"><span class="glyphicon glyphicon-arrow-down"></span>by confidence</option>
+                     <option value="3">by lift</option>
+                    </select> 
+                        <select id="ItemOrder2" class="selectpicker btn-default" style="width: 5px;height: 5px;" onchange="sort_function2()">
+                     <option value="support">  <span class="caret"></span></option>
+                    <option value="4">by support</option>
+                    <option value="5">by confidence</option>
+                     <option value="6">by lift</option>
+                    </select> 
+      
+                    <select id="ItemOrder3" class="selectpicker btn-default" style="width: 5px;height: 5px;" onchange="sort_function3()">
+                  <option value="support">  <span class="caret"></span></option>
+                <option value="7">by support</option>
+                <option value="8">by confidence</option>
+                 <option value="9">by lift</option>
+                 </select> 
+       
+               <select id="ItemOrder4" class="selectpicker btn-default" style="width: 5px;height: 5px;" onchange="sort_function4()">
+                 <option value="support">  <span class="caret"></span></option>
+                <option value="10">by support</option>
+                <option value="11">by confidence</option>
+                 <option value="12">by lift</option>
+                  </select> 
+      
+                 <select id="ItemOrder5" class="selectpicker btn-default" style="width: 5px;height: 5px;" onchange="sort_function5()">
+                 <option value="support">  <span class="caret"></span></option>
+                <option value="13">by support</option>
+                <option value="14">by confidence</option>
+                 <option value="15">by lift</option>
+                </select> 
+          <select id="ItemOrder6" class="selectpicker btn-default" style="width: 5px;height: 5px;" onchange="sort_function6()">
+                   <option value="support">  <span class="caret"></span></option>
+                  <option value="16">by support</option>
+                  <option value="17">by confidence</option>
+                   <option value="18">by lift</option>
+        </select> 
+           <select id="ItemOrder7" class="selectpicker btn-default" style="width: 5px;height: 5px;" onchange="sort_function7()">
+                 <option value="support">  <span class="caret"></span></option>
+                <option value="19">by support</option>
+                <option value="20">by confidence</option>
+                 <option value="21">by lift</option>
+        </select>    
+                    </div>
+                    <div id="drawxaxis">
+                        <div id="sty1" >
+                          <!-- <button  type="button" class="btn btn-default" style="margin-left:40px;margin-top: 5px" id="ItemLengthOrder"  onclick="LengthSort_function()">sort</button> -->
+                           <a><span id="ItemLengthOrder"  onclick="LengthSort1_function()" style="margin-left:40px;margin-top: 0px" class="glyphicon glyphicon-chevron-up"></span></a>
+                           <p><a><span style="margin-left:40px;margin-top: 0px" 
+                           onclick="LengthSort2_function()" class="glyphicon glyphicon-chevron-down"></span></a></p>
+                        </div>
+                    </div>
+                    <div id="circlrdivRegion" >
+          <table style="margin-left: 36px; " >
+                        <tbody>
+                        </tbody>
+                    </table >
+          </div>
+                </div>
+            </div>
+            </div>
+             <div class="col-md-3" >
+                       <div id="tab">
+                       <div style="border-radius: 6px; background-color: #ABABAB;">
+                        <A style="color:white;text-align: center;line-height: 40px;"><h2>Rules of Interest</h2></A>  
+                        </div>  
+                        <div  id="right_tempt">   
+                          <div id="drawxaxisRecord">
+                         </div>                   
+                       <table class="t1"> 
+                        </table>
+                        <table class="t2">
+                            <a style="margin-left: 500px"><b><h3>New Rule List</h3></b></a>   
+                        </table> 
+                       </div>
+                <button type="button" class="btn .btn-default" style="margin-top:10px;margin-left:30px" 
+               onclick="clearAll()">clear all</button>
+                      </div>      
+        
+             </div>
+          </div>
+          
+           <!--  <div class="col-md-2">
+                <div id="topMiddle">
+                  <div style="border-radius: 6px; background-color:#ABABAB;">
+                  <A style="color:white;text-align: center;"><h2>Control</h2></A> 
+                  </div> 
+                  <h3 style="text-align: center;line-height: 40px;"><span class="label label-primary" style="background-color:#ABABAB;">&nbsp;  &nbsp;  &nbsp;  Filter By  &nbsp;  &nbsp;  &nbsp;  </span></h3>
+                <br>
+                  <div class="filter-main-content" style="overflow-x:hidden;">    
+<div class="control-group" align="center">
+   
+       <A style="text-align: center;"><h5>consequent</h5></A> 
+    <select id="changeConsequent" style="width:240px;  height:35px;" onchange="myfunctionConsequent()">
+        <option value="0" selected="selected" >allConsequent</option>
+       
+    </select>
+
+</div>
+                
+    <br>
+
+<div class="control-group" align="center">
+   <A style="text-align: center;"><h5>antecedent</h5></A> 
+    <select id="changeAntecedent" placeholder="twitterhandle" style="width:240px;  height:35px;" onchange="myfunctionAntecedent()">
+        <option value="0" selected="selected" >allAntecedent</option>
+       
+    </select>
+
+</div>
+
+ <br>             
+                            
+ <div class="control-group" align="center">
+   <A style="text-align: center;"><h5>rLength</h5></A> 
+    <select id="changeRlength" style="width:240px;  height:35px;" onchange="myfunction()">
+        <option value="1" selected="selected">all</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option> 
+        <option value="5">5</option>
+        <option value="6">6</option>    
+    </select>
+
+</div>
+   <br> 
+   <div class="control-group" align="center">  
+    <A style="text-align: center;"><h5>Orderby</h5></A> 
+    <select id="changesort" style="width:240px;  height:35px;" onchange="sort_function()">
+        <option value="0" selected="selected">all</option>
+    </select>
+</div>
+   <br>  
+   
+   <br>                 
+      <div id="left_down">
+      minSupport:&nbsp;&nbsp;<a id="demo"  style= "border-bottom:  0.5px solid black;color: green;
+            font-size: 20px"></a><br><br><input type="range"  id="range_s" min="0.020" max="0.060" step="0.01"  
+            onchange="MyRange_s()" style=" cursor: pointer;">
+            <br> 
+      minConfidence:&nbsp;&nbsp;<a id="demo1"  style= "border-bottom: 0.5px solid black;color: green;
+            font-size: 20px"></a><br><br><input type="range" id="range_c" min="0.50" max="1" step = "0.05" 
+            onchange="MyRange_c()"  style="cursor: pointer;"> 
+      </div>
+   </div>
+   </div>
+  </div> -->
+          <div class="col-md-12" >
+                  <div class="col-md-6">
+                    <div id="bar">
+                        <div style="border-radius: 6px; background-color: #ABABAB;">
+                          <A style="color:white;text-align: center;"><h2>Itemsets</h2></A>  
+                        </div>
+                        <div id="Content-Right-Top">
+                         <div style="position: absolute;margin-left:50px;" ><p><h5><b>Support</b></h5></p></div>
+                         </div>
+                     </div>
+                   </div>
+                    
+                        <div class="col-md-6">
+                        <div id="right_down">
+                      <div style="border-radius: 6px; background-color:#ABABAB;">
+                      <A style="color:white;text-align: center;line-height: 40px;"><h2> Rule Data Distribution </h2></A> 
+                      </div> 
+                          <button type="button" class="btn .btn-default" id="switch" style="margin-top:20px;margin-bottom:20px;"  onclick="sun_change(); ">Monday Starts</button>   
+                          <button type="button" class="btn .btn-default "  data-loading-text="Loading..."
+                          style="margin-top:20px;margin-bottom:20px; "  onclick="convert_data(); ">Recalculation</button>
+                           <button type="button" class="btn .btn-default " onclick="Reselect(); ">Reselect </button>
+                          <div id="txt" style="font-size:20px;font-family:Times;"></div>
+                           <div style="position: absolute;margin-top: 13px; margin-left:880px;" ><p><h5><b>Hour</b></h5></p></div>
+                          <div id="rightDown">
+                            
+                            </div>
+         
+                     </div>
+                     </div>
+               </div>      
+        </div> 
+        </div>
+  <script>
+
+////////////////////////////////////////kaishi 
+var dict_cbx = {};
+ dict_cbx["cbx_item_set_2"] = true;
+ dict_cbx["cbx_item_set_3"] = true;
+ dict_cbx["cbx_item_set_4"] = true;
+ dict_cbx["cbx_item_set_5"] = true;
+ dict_cbx["cbx_item_set_6"] = true;
+ 
+var order_index=true;
+
+var doub =[];  
+$.ajaxSetup ({
+                cache: false
+            });
+       
+$.getScript("matrix.js");
+$(".atab").click(function() {
+                $.getScript("matrix.js");
+            });
+			
+$(".btab").click(function() {
+                $.getScript("force.js");
+            });
+
+
+function Reselect(){
+     //console.log(rule_n);
+         var rule_s= rule_n.replace("->",", ");
+         L.length = 0;
+         d3.selectAll(".rects rect").attr("fill","white");      
+         rule_click(alll) ; 
+     }
+  
+
+   function clearAll(){
+       d3.select("#right_tempt table.t1").selectAll("tr").remove(); 
+        d3.select("#right_tempt table.t2").selectAll("tr").remove(); 
+        c_dot.length = 0;
+        list1.length = 0;
+
+  }
+
+ 
+function drawForceCircle3(data,sin) {    
+    //删掉之前的重新画
+    d3.select("body").select("div#circlegroup").selectAll("tr").remove();
+      d3.selectAll(".itemsetrecgroup").remove();
+       d3.selectAll("#calendar_region rect").remove();          
+        
+      //////////////////////////////////////////////////////////////////////////????
+        
+     d3.csv(data,function(error,data) {
+
+       data.forEach(function(l,i){ 
+                var m=l.rule;
+        var regex = new RegExp(",", 'g'); 
+        var result = m.match(regex);
+        var count = !result ? 2 : result.length+2;
+
+       
+        if(dict_cbx["cbx_item_set_"+count] == true){
+          if (sin.length == 2) {
+              if (m.indexOf(sin[0])==-1||m.indexOf(sin[1])==-1)    
+                {l.isshow=0;}
+              else{l.isshow=1;}
+                }
+                
+          else if (sin.length == 1) {
+                if (m.indexOf(sin[0])==-1)    
+                {l.isshow=0;}
+                else{l.isshow=1;}
+                }
+            }
+         });
+
+         function fil(d){
+                return d.isshow;
+         }
+         var newdata=data.filter(fil);
+         // console.log(newdata);
+         
+         
+            if (error) {
+                console.log("loading csvdata error");
+            }                   
+                        
+            else {    
+
+               var dic=new Array();
+                    for(var i=0;i<(newdata.length);i++){
+                       // console.log(sort_a.length);
+                        dic[i]=newdata[i].rule;
+                        // console.log(dic[i]);
+                        newdata[i].keys=dic[i].length;
+                        // console.log( newdata[i].keys);
+                    }
+        
+            var tooltip = d3.select("body")
+                .append("div")  
+                .attr("class","balltiptxt")  
+               .style("opacity",0.0);
+
+            var ctooltip = d3.select("body")
+                .append("div")  
+                .attr("class","cballtiptxt")  
+                .style("opacity",0.0);
+                   
+
+              var year=["1","2","3","4","5","6","7"];
+              
+              var tr = d3.select("tbody").selectAll("tr") //设置行
+                        .data(newdata)
+                        .enter().append("tr")
+                        .attr("rule",function(d) {return d.rule;})
+                        .on("mouseover",function(d){  
+                                ctooltip.html(d.rule +"<br />"+d.Def) 
+                                     .style("left", (d3.event.pageX ) + "px")  
+                                     .style("top", (d3.event.pageY + 20) + "px")  
+                                     .style("opacity",1.0);  
+                            var myDate=new Date();
+                                                        console.log("mouseover rule "+d.rule +"\t"+" time:"+myDate.toLocaleString());///////////////////////////
+                           })                    
+                        .on("mouseout",function(d){  
+                                      // 鼠标移出时，将透明度设定为0.0（完全透明）
+                                         ctooltip.style("opacity",0.0);  
+                           });
+            //排序代码
+      // if(sort_by != "" && sort_by != null && sort_by != undefined){
+    
+                     tr.sort(function(a,b){return d3.ascending(a.keys,b.keys)});
+      //               var myDate=new Date();///////////
+      //               console.log("sort  "+sort_by +"\t"+"   time:"+myDate.toLocaleString());
+      //               }
+
+                    tr.append("th")
+                      .text(function(d) { return d.rule; });
+                   
+                    var years= new Array(); 
+                  
+                    for (var i in year){
+                        //console.log(year[i]);
+                        var obj = new Object();
+                        obj.sup = "support"+year[i];
+                        obj.con = "confidence"+year[i];
+                        obj.lift = "lift"+year[i];
+            
+                        years.push(obj);
+                        
+                        }
+                        
+                    tr.selectAll("td")
+                        .data(function(d) { 
+                            return years.map(function(k){
+                            var ob =new Object();
+                                ob.ru =d.rule;/////////////////
+                              var la=(k.sup).replace("support","");///////////////////
+                                ob.yt = la;//////////////////////////////
+                                ob.sup=d[k.sup];
+                                ob.con=d[k.con];
+                ob.lift=d[k.lift];
+                            return ob; 
+                            }); 
+                           }) 
+                        .enter().append("td").append("svg")
+                        .attr("width", 67.5)
+                        .attr("height", 45)
+                        .append("circle")
+                        .attr("support", function(ob) {
+                               return ob.sup;
+                          })
+                        .attr("confidence", function(ob) {
+                               return ob.con;
+                          })
+             .attr("lift", function(ob) {
+                               return ob.lift;
+                          })
+                        .attr("cx",30)
+                        .attr("cy",22.5)
+                        .attr("r", function(d) { 
+                        if(d.sup == 0||d.sup == null){ return 0;}else if(d.sup >0.2){return 21;}else{ return d.sup * 100; }
+                        })
+                        .attr("fill",function(d){
+                             if(d.con ==null){return 0;}else if (d.con <=0.6) {return compute(d.con-0.5);} 
+                              else if (d.con>=0.6&&d.con <=0.7) {return compute(d.con-0.3);}  else if (d.con>=0.7&&
+                                d.con <=0.8) {return compute(d.con-0.1);} else { return compute(d.con);}  }
+                        )
+                        .on("mouseover",function(d){  
+                                tooltip.html("support: " +d.sup.substring(0, 5) +"<br />"+"confidence: " + d.con.substring(0, 5)) 
+                                     .style("left", (d3.event.pageX) + "px")  
+                                     .style("top", (d3.event.pageY - 60) + "px")  
+                                     .style("opacity",1.0);  
+                                d3.select(this)
+                                  .attr("r",function(d) {  
+                                            if(d.sup == 0||d.sup == null){ return 0;}else if(d.sup >0.2){return 21;}else{ return d.sup * 100; }
+                                                         }) ;
+                                                                var myDate=new Date();
+                                                                //console.log(d);
+                                                                console.log("mouseover dot information"+d.ru +'//'+  d.yt+ '\t'+"time:"+myDate.toLocaleString());//////////////////////////////////
+                           })                    
+                       .on("mouseout",function(d){  
+    /* 鼠标移出时，将透明度设定为0.0（完全透明）*/  
+                                    d3.select(this)
+                                      .attr("r",function(d) {  
+                                            if(d.sup == 0||d.sup == null){ return 0;}else if(d.sup >0.2){return 21;}else{ return d.sup * 100; }
+                                                            });
+                                    tooltip.style("opacity",0.0);  
+                           });
+                                                   
+            //点击一行响应
+            tr.on("click.first",rule_click)
+              // .on("click.third",  drawRecordCircle(d))
+              .on("click.second",function(){
+                d3.selectAll("tr").style("color","black");
+                d3.select(this).style("color","orange");
+              });
+            
+
+    }
+     }) };
+function drawForceCircle1(data,sin) {     //从多到少排列
+    //删掉之前的重新画
+    d3.select("body").select("div#circlegroup").selectAll("tr").remove();
+      d3.selectAll(".itemsetrecgroup").remove();
+       d3.selectAll("#calendar_region rect").remove();          
+        
+     console.log(sin);
+  
+     d3.csv(data,function(error,data) {
+     
+
+        data.forEach(function(l,i){ 
+        var m=l.rule;
+        var regex = new RegExp(",", 'g'); 
+        var result = m.match(regex);
+        var count = !result ? 2 : result.length+2;
+
+       
+        if(dict_cbx["cbx_item_set_"+count] == true){
+          if (sin.length == 2) {
+              if (m.indexOf(sin[0])==-1||m.indexOf(sin[1])==-1)    
+                {l.isshow=0;}
+              else{l.isshow=1;}
+                }
+                
+          else if (sin.length == 1) {
+                if (m.indexOf(sin[0])==-1)    
+                {l.isshow=0;}
+                else{l.isshow=1;}
+                }
+           else if (sin.length == 0) {
+                l.isshow=1;
+                }
+            }
+         });
+
+         function fil(d){
+                return d.isshow;
+         }
+
+         var newdata=data.filter(fil);
+       
+         
+            if (error) {
+                console.log("loading csvdata error");
+            }                   
+                        
+            else {    
+                  // console.log(newdata.length);
+                var dic=new Array();
+                    for(var i=0;i<(newdata.length);i++){
+                       // console.log(sort_a.length);
+                        dic[i]=newdata[i].rule;
+                        // console.log(dic[i]);
+                        newdata[i].keys=dic[i].length;
+                        // console.log( newdata[i].keys);
+                    }
+                  
+
+            var tooltip = d3.select("body")
+                .append("div")  
+                .attr("class","balltiptxt")  
+               .style("opacity",0.0);
+
+            var ctooltip = d3.select("body")
+                .append("div")  
+                .attr("class","cballtiptxt")  
+                .style("opacity",0.0);
+                   
+
+              var year=["1","2","3","4","5","6","7"];
+              
+              var tr = d3.select("tbody").selectAll("tr") //设置行
+                        .data(newdata)
+                        // .data(function(){ if (sin.length==0) {return data;}
+                        //                      else {return newdata;}})
+                        .enter().append("tr")
+                        .attr("rule",function(d) {return d.rule;})
+                        .on("mouseover",function(d){  
+                                ctooltip.html(d.rule +"<br />"+d.Def) 
+                                     .style("left", (d3.event.pageX ) + "px")  
+                                     .style("top", (d3.event.pageY + 20) + "px")  
+                                     .style("opacity",1.0);  
+                            var myDate=new Date();
+                             console.log("mouseover rule "+d.rule +"\t"+" time:"+myDate.toLocaleString());///////////////////////////
+                           })                    
+                        .on("mouseout",function(d){  
+                                      // 鼠标移出时，将透明度设定为0.0（完全透明）
+                                         ctooltip.style("opacity",0.0);  
+                           });
+            //排序代码
+      // if(sort_by != "" && sort_by != null && sort_by != undefined){
+  
+                     // tr.sort(function(a,b){return d3.descending(a[sort_by],b[sort_by])});
+                  
+                     tr.sort(function(a,b){  
+                            return d3.descending(a.keys,b.keys)
+                             });
+                    
+                    var myDate=new Date();///////////
+                    // console.log("sort  "+sort_by +"\t"+"   time:"+myDate.toLocaleString());
+                    // }
+
+                    tr.append("th")
+                      .text(function(d) { return d.rule; });
+                   
+                    var years= new Array(); 
+                  
+                    for (var i in year){
+                        //console.log(year[i]);
+                        var obj = new Object();
+                        obj.sup = "support"+year[i];
+                        obj.con = "confidence"+year[i];
+                        obj.lift = "lift"+year[i];
+            
+                        years.push(obj);
+                        
+                        }
+                        
+                    tr.selectAll("td")
+                        .data(function(d) { 
+                            return years.map(function(k){
+                            var ob =new Object();
+                                ob.ru =d.rule;/////////////////
+                              var la=(k.sup).replace("support","");///////////////////
+                                ob.yt = la;//////////////////////////////
+                                ob.sup=d[k.sup];
+                                ob.con=d[k.con];
+                                ob.lift=d[k.lift];
+                            return ob; 
+                            }); 
+                           }) 
+                        .enter().append("td").append("svg")
+                        .attr("width", 67.5)
+                        .attr("height", 45)
+                        .append("circle")
+                        .attr("support", function(ob) {
+                               return ob.sup;
+                          })
+                        .attr("confidence", function(ob) {
+                               return ob.con;
+                          })
+                       .attr("lift", function(ob) {
+                              return ob.lift;
+                          })
+                        .attr("cx",30)
+                        .attr("cy",22.5)
+                        .attr("r", function(d) { 
+                        if(d.sup == 0||d.sup == null){ return 0;}else if(d.sup >0.2){return 21;}else{ return d.sup * 100; }
+                        })
+                        .attr("fill",function(d){
+                             if(d.con ==null){return 0;}else if (d.con <=0.6) {return compute(d.con-0.5);} 
+                              else if (d.con>=0.6&&d.con <=0.7) {return compute(d.con-0.3);}  else if (d.con>=0.7&&
+                                d.con <=0.8) {return compute(d.con-0.1);} else { return compute(d.con);}  }
+                        )
+                        .on("mouseover",function(d){  
+                                tooltip.html("support: " +d.sup.substring(0, 5) +"<br />"+"confidence: " + d.con.substring(0, 5)) 
+                                     .style("left", (d3.event.pageX) + "px")  
+                                     .style("top", (d3.event.pageY - 60) + "px")  
+                                     .style("opacity",1.0);  
+                                d3.select(this)
+                                  .attr("r",function(d) {  
+                                            if(d.sup == 0||d.sup == null){ return 0;}else if(d.sup >0.2){return 21;}else{ return d.sup * 100; }
+                                                         }) ;
+                                                                var myDate=new Date();
+                                                                //console.log(d);
+                                                                console.log("mouseover dot information"+d.ru +'//'+  d.yt+ '\t'+"time:"+myDate.toLocaleString());//////////////////////////////////
+                           })                    
+                       .on("mouseout",function(d){  
+    /* 鼠标移出时，将透明度设定为0.0（完全透明）*/  
+                                    d3.select(this)
+                                      .attr("r",function(d) {  
+                                           if(d.sup == 0||d.sup == null){ return 0;}else if(d.sup >0.2){return 21;}else{ return d.sup * 100; }
+                                                            });
+                                    tooltip.style("opacity",0.0);  
+                           });
+                        
+            //点击一行响应
+            tr.on("click.first",rule_click)
+              // .on("click.third",  drawRecordCircle(d))
+              .on("click.second",function(){
+                d3.selectAll("tr").style("color","black");
+                d3.select(this).style("color","orange");
+              });
+            
+
+    }
+     }) };
+
+function drawForceCircleX(data,sin) {       //从少到多排列 
+    //删掉之前的重新画
+    d3.select("body").select("div#circlegroup").selectAll("tr").remove();
+      d3.selectAll(".itemsetrecgroup").remove();
+       d3.selectAll("#calendar_region rect").remove();          
+        
+     console.log(sin);
+  
+     d3.csv(data,function(error,data) {
+     
+
+        data.forEach(function(l,i){ 
+        var m=l.rule;
+        var regex = new RegExp(",", 'g'); 
+        var result = m.match(regex);
+        var count = !result ? 2 : result.length+2;
+
+       
+        if(dict_cbx["cbx_item_set_"+count] == true){
+          if (sin.length == 2) {
+              if (m.indexOf(sin[0])==-1||m.indexOf(sin[1])==-1)    
+                {l.isshow=0;}
+              else{l.isshow=1;}
+                }
+                
+          else if (sin.length == 1) {
+                if (m.indexOf(sin[0])==-1)    
+                {l.isshow=0;}
+                else{l.isshow=1;}
+                }
+           else if (sin.length == 0) {
+                l.isshow=1;
+                }
+            }
+         });
+
+         function fil(d){
+                return d.isshow;
+         }
+
+         var newdata=data.filter(fil);
+       
+         
+            if (error) {
+                console.log("loading csvdata error");
+            }                   
+                        
+            else {    
+                  // console.log(newdata.length);
+                var dic=new Array();
+                    for(var i=0;i<(newdata.length);i++){
+                       // console.log(sort_a.length);
+                        dic[i]=newdata[i].rule;
+                        // console.log(dic[i]);
+                        newdata[i].keys=dic[i].length;
+                        // console.log( newdata[i].keys);
+                    }
+                  
+
+            var tooltip = d3.select("body")
+                .append("div")  
+                .attr("class","balltiptxt")  
+               .style("opacity",0.0);
+
+            var ctooltip = d3.select("body")
+                .append("div")  
+                .attr("class","cballtiptxt")  
+                .style("opacity",0.0);
+                   
+
+              var year=["1","2","3","4","5","6","7"];
+              
+              var tr = d3.select("tbody").selectAll("tr") //设置行
+                        .data(newdata)
+                        // .data(function(){ if (sin.length==0) {return data;}
+                        //                      else {return newdata;}})
+                        .enter().append("tr")
+                        .attr("rule",function(d) {return d.rule;})
+                        .on("mouseover",function(d){  
+                                ctooltip.html(d.rule +"<br />"+d.Def) 
+                                     .style("left", (d3.event.pageX ) + "px")  
+                                     .style("top", (d3.event.pageY + 20) + "px")  
+                                     .style("opacity",1.0);  
+                            var myDate=new Date();
+                             console.log("mouseover rule "+d.rule +"\t"+" time:"+myDate.toLocaleString());///////////////////////////
+                           })                    
+                        .on("mouseout",function(d){  
+                                      // 鼠标移出时，将透明度设定为0.0（完全透明）
+                                         ctooltip.style("opacity",0.0);  
+                           });
+            //排序代码
+      // if(sort_by != "" && sort_by != null && sort_by != undefined){
+  
+                     // tr.sort(function(a,b){return d3.descending(a[sort_by],b[sort_by])});
+                  
+                     tr.sort(function(a,b){  
+                            return d3.ascending(a.keys,b.keys)
+                             });
+                    
+                    var myDate=new Date();///////////
+                    // console.log("sort  "+sort_by +"\t"+"   time:"+myDate.toLocaleString());
+                    // }
+
+                    tr.append("th")
+                      .text(function(d) { return d.rule; });
+                   
+                    var years= new Array(); 
+                  
+                    for (var i in year){
+                        //console.log(year[i]);
+                        var obj = new Object();
+                        obj.sup = "support"+year[i];
+                        obj.con = "confidence"+year[i];
+                        obj.lift = "lift"+year[i];
+            
+                        years.push(obj);
+                        
+                        }
+                        
+                    tr.selectAll("td")
+                        .data(function(d) { 
+                            return years.map(function(k){
+                            var ob =new Object();
+                                ob.ru =d.rule;/////////////////
+                              var la=(k.sup).replace("support","");///////////////////
+                                ob.yt = la;//////////////////////////////
+                                ob.sup=d[k.sup];
+                                ob.con=d[k.con];
+                                ob.lift=d[k.lift];
+                            return ob; 
+                            }); 
+                           }) 
+                        .enter().append("td").append("svg")
+                        .attr("width", 67.5)
+                        .attr("height", 45)
+                        .append("circle")
+                        .attr("support", function(ob) {
+                               return ob.sup;
+                          })
+                        .attr("confidence", function(ob) {
+                               return ob.con;
+                          })
+                       .attr("lift", function(ob) {
+                              return ob.lift;
+                          })
+                        .attr("cx",30)
+                        .attr("cy",22.5)
+                        .attr("r", function(d) { 
+                        if(d.sup == 0||d.sup == null){ return 0;}else if(d.sup >0.2){return 21;}else{ return d.sup * 100; }
+                        })
+                        .attr("fill",function(d){
+                             if(d.con ==null){return 0;}else if (d.con <=0.6) {return compute(d.con-0.5);} 
+                              else if (d.con>=0.6&&d.con <=0.7) {return compute(d.con-0.3);}  else if (d.con>=0.7&&
+                                d.con <=0.8) {return compute(d.con-0.1);} else { return compute(d.con);}  }
+                        )
+                        .on("mouseover",function(d){  
+                                tooltip.html("support: " +d.sup.substring(0, 5) +"<br />"+"confidence: " + d.con.substring(0, 5)) 
+                                     .style("left", (d3.event.pageX) + "px")  
+                                     .style("top", (d3.event.pageY - 60) + "px")  
+                                     .style("opacity",1.0);  
+                                d3.select(this)
+                                  .attr("r",function(d) {  
+                                            if(d.sup == 0||d.sup == null){ return 0;}else if(d.sup >0.2){return 21;}else{ return d.sup * 100; }
+                                                         }) ;
+                                                                var myDate=new Date();
+                                                                //console.log(d);
+                                                                console.log("mouseover dot information"+d.ru +'//'+  d.yt+ '\t'+"time:"+myDate.toLocaleString());//////////////////////////////////
+                           })                    
+                       .on("mouseout",function(d){  
+    /* 鼠标移出时，将透明度设定为0.0（完全透明）*/  
+                                    d3.select(this)
+                                      .attr("r",function(d) {  
+                                            if(d.sup == 0||d.sup == null){ return 0;}else if(d.sup >0.2){return 21;}else{ return d.sup * 100; }
+                                                            });
+                                    tooltip.style("opacity",0.0);  
+                           });
+                        
+            //点击一行响应
+            tr.on("click.first",rule_click)
+              // .on("click.third",  drawRecordCircle(d))
+              .on("click.second",function(){
+                d3.selectAll("tr").style("color","black");
+                d3.select(this).style("color","orange");
+              });
+            
+
+    }
+     }) };
+  
+
+
+  function sort_function(){
+     var selection = document.getElementById('changesort');
+     var a =selection.value;
+     // console.log(a);
+     if (a=="100") { drawCircle("nrule.csv"); }
+   // //判断a}
+     else {  drawCircle5("nrule.csv",a);
+      } 
+   
+  }
+   function sort_function1(){
+     // var selection = document.getElementById('changesort');
+      var selection = document.getElementById('ItemOrder1');
+      var a = selection.value;
+      
+      selection.onmousedown = function(){//当按下鼠标按钮的时候  
+                this.sindex = this.selectedIndex;//把当前选中的值得索引赋给下拉选中的索引  
+                this.selectedIndex = -1;//把下拉选中的索引改变为-1,也就是没有!  
+            }  
+      selection.onmouseup = function(){//当鼠标移开的时候  
+                var index = selection.selectedIndex;//获取下拉选中的索引  
+                if(index == -1){//如果为-1,就是根本没有选  
+                    this.selectedIndex = this.sindex;//就把下拉选中的索引改变成之前选中的值得索引,就默认选择的是之前选中的值  
+                }         
+            }  
+     if (a=="100") { drawCircle("nrule.csv"); }
+    
+     else {  drawCircle3("nrule.csv",doub,a);
+      }}
+
+  function sort_function2(){
+     // var selection = document.getElementById('changesort');
+      var selection = document.getElementById('ItemOrder2');
+      var a = selection.value;
+     // console.log(a);
+      selection.onmousedown = function(){//当按下鼠标按钮的时候  
+                this.sindex = this.selectedIndex;//把当前选中的值得索引赋给下拉选中的索引  
+                this.selectedIndex = -1;//把下拉选中的索引改变为-1,也就是没有!  
+            }  
+      selection.onmouseup = function(){//当鼠标移开的时候  
+                var index = selection.selectedIndex;//获取下拉选中的索引  
+                if(index == -1){//如果为-1,就是根本没有选  
+                    this.selectedIndex = this.sindex;//就把下拉选中的索引改变成之前选中的值得索引,就默认选择的是之前选中的值  
+                }         
+            }  
+     if (a=="100") { drawCircle("nrule.csv"); }
+   // //判断a}
+     else {  drawCircle3("nrule.csv",doub,a);
+    
+      }}
+
+  function sort_function3(){
+     // var selection = document.getElementById('changesort');
+      var selection = document.getElementById('ItemOrder3');
+      var a = selection.value;
+      selection.onmousedown = function(){//当按下鼠标按钮的时候  
+                this.sindex = this.selectedIndex;//把当前选中的值得索引赋给下拉选中的索引  
+                this.selectedIndex = -1;//把下拉选中的索引改变为-1,也就是没有!  
+            }  
+      selection.onmouseup = function(){//当鼠标移开的时候  
+                var index = selection.selectedIndex;//获取下拉选中的索引  
+                if(index == -1){//如果为-1,就是根本没有选  
+                    this.selectedIndex = this.sindex;//就把下拉选中的索引改变成之前选中的值得索引,就默认选择的是之前选中的值  
+                }         
+            }  
+     if (a=="100") { drawCircle("nrule.csv"); }
+   // //判断a}
+     else {  drawCircle3("nrule.csv",doub,a);
+   
+      }}
+
+  function sort_function4(){
+     // var selection = document.getElementById('changesort');
+      var selection = document.getElementById('ItemOrder4');
+      var a = selection.value;
+      selection.onmousedown = function(){//当按下鼠标按钮的时候  
+                this.sindex = this.selectedIndex;//把当前选中的值得索引赋给下拉选中的索引  
+                this.selectedIndex = -1;//把下拉选中的索引改变为-1,也就是没有!  
+            }  
+      selection.onmouseup = function(){//当鼠标移开的时候  
+                var index = selection.selectedIndex;//获取下拉选中的索引  
+                if(index == -1){//如果为-1,就是根本没有选  
+                    this.selectedIndex = this.sindex;//就把下拉选中的索引改变成之前选中的值得索引,就默认选择的是之前选中的值  
+                }         
+            }  
+     if (a=="100") { drawCircle("nrule.csv"); }
+   // //判断a}
+     else {  drawCircle3("nrule.csv",doub,a);
+ 
+      }}
+
+  function sort_function5(){
+     // var selection = document.getElementById('changesort');
+      var selection = document.getElementById('ItemOrder5');
+      var a = selection.value;
+     selection.onmousedown = function(){//当按下鼠标按钮的时候  
+                this.sindex = this.selectedIndex;//把当前选中的值得索引赋给下拉选中的索引  
+                this.selectedIndex = -1;//把下拉选中的索引改变为-1,也就是没有!  
+            }  
+      selection.onmouseup = function(){//当鼠标移开的时候  
+                var index = selection.selectedIndex;//获取下拉选中的索引  
+                if(index == -1){//如果为-1,就是根本没有选  
+                    this.selectedIndex = this.sindex;//就把下拉选中的索引改变成之前选中的值得索引,就默认选择的是之前选中的值  
+                }         
+            }  
+     if (a=="100") { drawCircle("nrule.csv"); }
+   // //判断a}
+     else {   drawCircle3("nrule.csv",doub,a);
+   
+      }}
+
+  function sort_function6(){
+     // var selection = document.getElementById('changesort');
+      var selection = document.getElementById('ItemOrder6');
+      var a = selection.value;
+     selection.onmousedown = function(){//当按下鼠标按钮的时候  
+                this.sindex = this.selectedIndex;//把当前选中的值得索引赋给下拉选中的索引  
+                this.selectedIndex = -1;//把下拉选中的索引改变为-1,也就是没有!  
+            }  
+      selection.onmouseup = function(){//当鼠标移开的时候  
+                var index = selection.selectedIndex;//获取下拉选中的索引  
+                if(index == -1){//如果为-1,就是根本没有选  
+                    this.selectedIndex = this.sindex;//就把下拉选中的索引改变成之前选中的值得索引,就默认选择的是之前选中的值  
+                }         
+            }  
+     if (a=="100") { drawCircle("nrule.csv"); }
+   // //判断a}
+     else {   drawCircle3("nrule.csv",doub,a);
+    
+      }}
+
+  function sort_function7(){
+     // var selection = document.getElementById('changesort');
+      var selection = document.getElementById('ItemOrder7');
+      var a = selection.value;
+      selection.onmousedown = function(){//当按下鼠标按钮的时候  
+                this.sindex = this.selectedIndex;//把当前选中的值得索引赋给下拉选中的索引  
+                this.selectedIndex = -1;//把下拉选中的索引改变为-1,也就是没有!  
+            }  
+      selection.onmouseup = function(){//当鼠标移开的时候  
+                var index = selection.selectedIndex;//获取下拉选中的索引  
+                if(index == -1){//如果为-1,就是根本没有选  
+                    this.selectedIndex = this.sindex;//就把下拉选中的索引改变成之前选中的值得索引,就默认选择的是之前选中的值  
+                }         
+            }  
+     if (a=="100") { drawCircle("nrule.csv"); }
+   // //判断a}
+     else {  drawCircle3("nrule.csv",doub,a);
+    
+      }
+  }
+// 　 var flag = true;
+// function  LengthSort_function()  {
+//  if (flag == true){ drawForceCircle1("nrule.csv",doub);}
+//  else {drawForceCircleX("nrule.csv",doub);}
+// 　　flag = !flag;
+// 　　}
+  
+  function  LengthSort1_function()  {
+      drawForceCircleX("nrule.csv",doub);}
+  function  LengthSort2_function()  {
+      drawForceCircle1("nrule.csv",doub);}
+  
+   var sort_by;
+  function addOptionsort(){
+        d3.csv("sort.csv",function(error,dataset){
+        //根据id查找对象     
+             var obj =document.getElementById('changesort');
+        //添加一个选项 
+            for (i=0;i<dataset.length;i++) {        
+                 obj.add(new Option(dataset[i].value,dataset[i].key))
+         
+             };
+        });
+ }
+    
+      addOptionsort();
+      addOptionpre();
+      addOptioncons();
+ function addOptioncons(){
+          d3.csv("kkk.csv",function(error,dataset){
+         //根据id查找对象 
+             var obj=document.getElementById('changeConsequent');
+        //添加一个选项 
+             for (i=0;i<dataset.length;i++) {   
+                 obj.add(new Option(dataset[i].vaa, dataset[i].value))
+             };
+            // console.log(dataset[1].value);
+           })
+       };
+ function addOptionpre(){
+          d3.csv("ppp.csv",function(error,dataset){
+         //根据id查找对象     
+             var obj=document.getElementById('changeAntecedent');
+        //添加一个选项 
+            for (i=0;i<dataset.length;i++) {        
+                 obj.add(new Option(dataset[i].vaa,dataset[i].value))
+             };
+         })
+     };
+
+ 
+
+ function myfunctionAntecedent() {
+     var selection = document.getElementById('changeAntecedent');
+     var a =selection.value;
+     // console.log(a);
+     var myDate=new Date();
+     console.log("Filter Antecedent  "+a +"\t"+" time:"+myDate.toLocaleString());///////////////////////
+       if (a==0)
+        {drawCircle("nrule.csv");}
+     else
+       {drawCircle("fan_/pre/"+a+".csv");}
+    } ; 
+         
+ function  myfunctionConsequent() {
+     var selection = document.getElementById('changeConsequent');
+     var a =selection.value;
+      var myDate=new Date();
+     console.log("Filter consequent  "+a +"\t"+" time:"+myDate.toLocaleString());///////////////////////
+     if (a==0)
+        {drawCircle("nrule.csv");}
+     else
+       {drawCircle("fan_/concl/"+a+".csv");}
+    } ;   
+ 
+ function  myfunction() {
+     var selection = document.getElementById('changeRlength');
+     var a =selection.value;
+      var myDate=new Date();///////////
+     console.log("Filter rLength  "+a +"\t"+" time:"+myDate.toLocaleString());/////////////////////////////////
+     if (a==1)
+        {drawCircle("nrule.csv");}
+     else
+       {drawCircle("item/"+a+".csv");}
+    } ;   
+  
+var width = 675,height = 45;
+
+var padding = {
+                left: 22.5,
+                right: 22.5,
+                // top: 20,
+                // bottom: 20
+            };
+//时间比例尺
+var dataset = [{"key":"Sun"},{"key":"Mon"},{"key":"Tue"},{"key":"Wed"},{"key":"Thu"},{"key":"Fri"},{"key":"Sat"}]
+  
+var timeScale = d3.scaleOrdinal()
+                  .domain(dataset.map(function(d){return d.key;})) 
+                  .range([22.5,90,157.5,225,292.5,360,427.5]);  
+    
+//定义时间轴
+var Xaxis = d3.axisTop().scale(timeScale);
+//添加时间轴    
+var svg = d3.select("#drawxaxis").append("svg")
+    .attr("width", width)
+    .attr("height", 45)
+    .append("g")
+    .attr("class", "axis")
+    .attr("transform", "translate(" + 195 + "," + 40 + ")")
+    .call(Xaxis);
+
+var timeScaleRecord = d3.scaleOrdinal()
+                  .domain(dataset.map(function(d){return d.key;})) 
+                   .range([22.5,90,157.5,225,292.5,360,427.5]); 
+var XaxisRecord = d3.axisTop().scale(timeScaleRecord);
+//添加时间轴    
+var svg = d3.select("#drawxaxisRecord").append("svg")
+    .attr("width", 520)
+    .attr("height", 45)
+    .append("g")
+    .attr("class", "axis")
+    .attr("transform", "translate(" + 70 + "," + 40 + ")")
+    .call(XaxisRecord);
+// 旋转文字
+// d3.selectAll('g.tick text').attr('transform','translate(-5,-10)rotate(30)'); 
+
+
+            drawrightaxis();//左下区域坐标轴
+            
+   //颜色比例尺
+   var a = d3.rgb(135,206,250);
+   var b = d3.rgb(0,0,255);
+   var compute = d3.interpolate(a,b);
+  
+
+  // 系统初始界面 先画全部圆
+ drawCircle("nrule.csv");
+ var alll; 
+ function drawCircle(data) {    
+    //删掉之前的重新画
+    d3.select("body").selectAll("tr").remove();
+      d3.selectAll(".itemsetrecgroup").remove();
+       d3.selectAll("#calendar_region rect").remove();   
+
+    
+    d3.csv(data,function(error,data) {
+            if (error) {
+                console.log("loading csvdata error");
+            }     
+              
+            else {    
+  
+            var tooltip = d3.select("body")
+                .append("div")  
+                .attr("class","balltiptxt")  
+               .style("opacity",0.0);
+
+            var ctooltip = d3.select("body")
+                .append("div")  
+                .attr("class","cballtiptxt")  
+                .style("opacity",0.0);
+                   
+
+              var year=["1","2","3","4","5","6","7"];
+              
+              var tr = d3.select("tbody").selectAll("tr") //设置行
+                        .data(data)
+                        .enter().append("tr")
+                        .attr("rule",function(d) {return d.rule;})
+                        .on("mouseover",function(d){  
+                                ctooltip.html(d.rule +"<br />"+d.Def) 
+                                     .style("left", (d3.event.pageX ) + "px")  
+                                     .style("top", (d3.event.pageY + 20) + "px")  
+                                     .style("opacity",1.0);  
+                              var myDate=new Date();
+                            console.log("mouseover rule "+d.rule +"\t"+" time:"+myDate.toLocaleString());///////////
+                            
+                           })                    
+                        .on("mouseout",function(d){  
+                                      // 鼠标移出时，将透明度设定为0.0（完全透明）
+                                         ctooltip.style("opacity",0.0);  
+                           });
+                    
+                    tr.append("th")
+					
+                      .text(function(d) { return d.rule; });
+                   
+                    var years= new Array(); 
+                  
+                    for (var i in year){
+                        //console.log(year[i]);
+                        var obj = new Object();
+                        obj.sup = "support"+year[i];
+                        obj.con = "confidence"+year[i]; 
+                        obj.lift = "lift"+year[i]; 
+                        years.push(obj);
+                        
+                        }
+                      // console.log(years);  
+                    tr.selectAll("td")
+                        .data(function(d) { 
+                            return years.map(function(k){
+                            var ob =new Object();
+                            ob.ru =k.rule;/////////////////
+                                var la=(k.sup).replace("support","");///////////////////
+                                ob.yt = la;
+                                ob.sup=d[k.sup];
+                                ob.con=d[k.con];
+                                ob.lift=d[k.lift];
+                            return ob; 
+                            }); 
+                           }) 
+                        .enter().append("td").append("svg")
+                        .attr("width", 67.5)
+                        .attr("height", 45)
+                        .append("circle")
+                        .attr("support", function(ob) {
+                               return ob.sup;
+                          })
+                        .attr("confidence", function(ob) {
+                               return ob.con;
+                          })
+						.attr("lift", function(ob) {
+							return ob.lift;
+                          })
+                        .attr("cx",30)
+                        .attr("cy",22.5)
+                        .attr("r", function(d) { 
+                        if(d.sup == 0||d.sup == null){ return 0;}else if(d.sup >0.2){return 21;}else{ return d.sup * 100; }
+                        })
+                        .attr("fill",function(d){
+                             if(d.con ==null){return 0;}else if (d.con <=0.6) {return compute(d.con-0.5);} 
+                              else if (d.con>=0.6&&d.con <=0.7) {return compute(d.con-0.3);}  else if (d.con>=0.7&&
+                                d.con <=0.8) {return compute(d.con-0.1);} else { return compute(d.con);}  }
+                        )
+                        .on("mouseover",function(d){  
+                                var content = "support: " +d.sup.substring(0, 5) +"<br />"+"confidence: " + d.con.substring(0, 5); 
+                                tooltip.html(content) 
+                                     .style("left", (d3.event.pageX) + "px")  
+                                     .style("top", (d3.event.pageY - 60) + "px")  
+                                     .style("opacity",1.0);  
+                                d3.select(this)
+                                  .attr("r",function(d) {  
+                                            if(d.sup == 0||d.sup == null){ return 0;}else if(d.sup >0.2){return 21;}else{ return d.sup * 100; }
+                                                         }) ;
+                                    var myDate=new Date();
+                                console.log("mouseover dot information"+d.ru +'//'+  d.yt+ '\t'+"time:"+myDate.toLocaleString());////
+                           })                    
+                       .on("mouseout",function(d){  
+    /* 鼠标移出时，将透明度设定为0.0（完全透明）*/  
+                                    d3.select(this)
+                                       .attr("r",function(d) {  
+                                           if(d.sup == 0||d.sup == null){ return 0;}else if(d.sup >0.2){return 21;}else{ return d.sup * 100; }
+                                                            });
+                                    tooltip.style("opacity",0.0);  
+                           });
+                                                   
+            //点击一行响应
+            tr.on("click.first", rule_click)
+              .on("click.second",function(){
+                d3.selectAll("tr").style("color","black");
+                d3.select(this).style("color","orange");
+              });
+            
+
+    }
+     }) };  
+function drawCircle5(data,key_s) {    
+    //删掉之前的重新画
+    d3.select("body").selectAll("tr").remove();
+      d3.selectAll(".itemsetrecgroup").remove();
+       d3.selectAll("#calendar_region rect").remove();   
+
+    // console.log(sin);
+    d3.csv(data,function(error,data) {
+
+       // data.forEach(function(l,i){ 
+       //          var m=l.rule;
+       //  var regex = new RegExp(",", 'g'); 
+       //  var result = m.match(regex);
+       //  var count = !result ? 2 : result.length+2;
+
+       
+       //  if(dict_cbx["cbx_item_set_"+count] == true){
+        
+       //        if (m.indexOf(sin[0])==-1||m.indexOf(sin[1])==-1)    
+       //          {l.isshow=0;}
+       //        else{l.isshow=1;}
+       //      }
+       //   });
+
+           
+            if (error) {
+                console.log("loading csvdata error");
+            }     
+              
+            else {   
+                        
+                  // console.log(newdata.length);
+                // var dic=new Array();
+                //     for(var i=0;i<(newdata.length);i++){
+                //        // console.log(sort_a.length);
+                //         dic[i]=newdata[i].rule;
+                //         // console.log(dic[i]);
+                //         newdata[i].keys=dic[i].length;
+                //         // console.log( newdata[i].keys);
+                //     } 
+  
+            var tooltip = d3.select("body")
+                .append("div")  
+                .attr("class","balltiptxt")  
+               .style("opacity",0.0);
+
+            var ctooltip = d3.select("body")
+                .append("div")  
+                .attr("class","cballtiptxt")  
+                .style("opacity",0.0);
+                   
+
+              var year=["1","2","3","4","5","6","7"];
+              
+              var tr = d3.select("tbody").selectAll("tr") //设置行
+                        .data(data)
+                        .enter().append("tr")
+                        .attr("rule",function(d) {return d.rule;})
+                        .on("mouseover",function(d){  
+                                ctooltip.html(d.rule +"<br />"+d.Def) 
+                                     .style("left", (d3.event.pageX ) + "px")  
+                                     .style("top", (d3.event.pageY + 20) + "px")  
+                                     .style("opacity",1.0);  
+                              var myDate=new Date();
+                            console.log("mouseover rule "+d.rule +"\t"+" time:"+myDate.toLocaleString());///////////
+                            
+                           })                    
+                        .on("mouseout",function(d){  
+                                      // 鼠标移出时，将透明度设定为0.0（完全透明）
+                                         ctooltip.style("opacity",0.0);  
+                           });
+                      d3.csv("sort.csv",function(error,sort_a){
+                      // console.log(sort_a[0].value);
+
+                    var dic=new Array();
+                    for(var i=1;i<(sort_a.length+1);i++){
+                       // console.log(sort_a.length);
+                        dic[i]=sort_a[i-1].title;
+                    }
+                    
+                    var sort_by=dic[key_s]; //改变这个
+                    tr.sort(function(a,b){return d3.descending(a[sort_by],b[sort_by])});
+                    var myDate=new Date();///////////
+                    console.log("sort  "+sort_by +"\t"+"   time:"+myDate.toLocaleString());
+                    }
+                    
+                    );
+                    // tr.sort(function(a,b){ return d3.descending(a.support1,b.support1)}  );
+                   
+                    tr.append("th")
+          
+                      .text(function(d) { return d.rule; });
+                   
+                    var years= new Array(); 
+                  
+                    for (var i in year){
+                        //console.log(year[i]);
+                        var obj = new Object();
+                        obj.sup = "support"+year[i];
+                        obj.con = "confidence"+year[i]; 
+                        obj.lift = "lift"+year[i]; 
+                        years.push(obj);
+                        
+                        }
+                      // console.log(years);  
+                    tr.selectAll("td")
+                        .data(function(d) { 
+                            return years.map(function(k){
+                            var ob =new Object();
+                            ob.ru =k.rule;/////////////////
+                                var la=(k.sup).replace("support","");///////////////////
+                                ob.yt = la;
+                                ob.sup=d[k.sup];
+                                ob.con=d[k.con];
+                                ob.lift=d[k.lift];
+                            return ob; 
+                            }); 
+                           }) 
+                        .enter().append("td").append("svg")
+                        .attr("width", 67.5)
+                        .attr("height", 45)
+                        .append("circle")
+                        .attr("support", function(ob) {
+                               return ob.sup;
+                          })
+                        .attr("confidence", function(ob) {
+                               return ob.con;
+                          })
+            .attr("lift", function(ob) {
+              return ob.lift;
+                          })
+                        .attr("cx",30)
+                        .attr("cy",22.5)
+                        .attr("r", function(d) { 
+                        if(d.sup == 0||d.sup == null){ return 0;}else if(d.sup >0.2){return 21;}else{ return d.sup * 100; }
+                        })
+                        .attr("fill",function(d){
+                             if(d.con ==null){return 0;}else if (d.con <=0.6) {return compute(d.con-0.5);} 
+                              else if (d.con>=0.6&&d.con <=0.7) {return compute(d.con-0.3);}  else if (d.con>=0.7&&
+                                d.con <=0.8) {return compute(d.con-0.1);} else { return compute(d.con);}  }
+                        )
+                        .on("mouseover",function(d){  
+                                var content = "support: " +d.sup.substring(0, 5) +"<br />"+"confidence: " + d.con.substring(0, 5); 
+                                tooltip.html(content) 
+                                     .style("left", (d3.event.pageX) + "px")  
+                                     .style("top", (d3.event.pageY - 60) + "px")  
+                                     .style("opacity",1.0);  
+                                d3.select(this)
+                                  .attr("r",function(d) {  
+                                            if(d.sup == 0||d.sup == null){ return 0;}else if(d.sup >0.2){return 21;}else{ return d.sup * 100; }
+                                                         }) ;
+                                    var myDate=new Date();
+                                console.log("mouseover dot information"+d.ru +'//'+  d.yt+ '\t'+"time:"+myDate.toLocaleString());////
+                           })                    
+                       .on("mouseout",function(d){  
+    /* 鼠标移出时，将透明度设定为0.0（完全透明）*/  
+                                    d3.select(this)
+                                       .attr("r",function(d) {  
+                                           if(d.sup == 0||d.sup == null){ return 0;}else if(d.sup >0.2){return 21;}else{ return d.sup * 100; }
+                                                            });
+                                    tooltip.style("opacity",0.0);  
+                           });
+                                                   
+            //点击一行响应
+            tr.on("click.first", rule_click)
+              .on("click.second",function(){
+                d3.selectAll("tr").style("color","black");
+                d3.select(this).style("color","orange");
+              });
+            
+
+    }
+     }) }; 
+function drawCircle4(data,key_s) {    
+    //删掉之前的重新画
+    d3.select("body").selectAll("tr").remove();
+     d3.selectAll(".itemsetrecgroup").remove();
+       d3.selectAll("#calendar_region rect").remove();   
+
+    
+    d3.csv(data,function(error,data) {
+           
+            if (error) {
+                console.log("loading csvdata error");
+            }           
+                 
+            else {    
+    
+
+            var tooltip = d3.select("body")
+                .append("div")  
+                .attr("class","balltiptxt")  
+               .style("opacity",0.0);
+
+            var ctooltip = d3.select("body")
+                .append("div")  
+                .attr("class","cballtiptxt")  
+                .style("opacity",0.0);
+                   
+
+              var year=["1","2","3","4","5","6","7"];
+              
+
+              var tr = d3.select("tbody").selectAll("tr") //设置行
+                        .data(data)
+                        .enter().append("tr")
+                        .attr("rule",function(d) { return d.rule;})
+                        .on("mouseover",function(d){  
+                                ctooltip.html(d.rule +"<br />"+d.Def) 
+                                     .style("left", (d3.event.pageX ) + "px")  
+                                     .style("top", (d3.event.pageY + 20) + "px")  
+                                     .style("opacity",1.0);  
+                            var myDate=new Date();
+                            console.log("mouseover rule "+d.rule +"\t"+" time:"+myDate.toLocaleString());///////////////////////////
+                           })                    
+                        .on("mouseout",function(d){  
+                                      // 鼠标移出时，将透明度设定为0.0（完全透明）
+                                         ctooltip.style("opacity",0.0);  
+                           });
+                    
+                  
+                    tr.sort(function(a,b){ if (key_s==1) {return  d3.descending(a.num,b.num)}
+                                                 else { return d3.ascending(a.num,b.num)}
+                     });
+                    var myDate=new Date();///////////
+                    console.log("sort  "+a +"\t"+"   time:"+myDate.toLocaleString());
+                    
+                    // );
+                    
+                    tr.append("th")
+                      .text(function(d) { return d.rule; });
+                   
+                    var years= new Array(); 
+                  
+                    for (var i in year){
+                        //console.log(year[i]);
+                        var obj = new Object();
+                        obj.sup = "support"+year[i];
+                        obj.con = "confidence"+year[i]; 
+                        obj.lift = "lift"+year[i]; 
+                        years.push(obj);
+                        
+                        }
+                        
+                    tr.selectAll("td")
+                        .data(function(d) { 
+                            return years.map(function(k){
+                            var ob =new Object();
+                                ob.ru =d.rule;/////////////////
+                                var la=(k.sup).replace("support","");///////////////////
+                                ob.yt = la;//////////////////////////////
+                                ob.sup=d[k.sup];
+                                ob.con=d[k.con];
+                                ob.lift=d[k.lift];
+                            return ob; 
+                            }); 
+                           }) 
+                        .enter().append("td").append("svg")
+                        .attr("width", 67.5)
+                        .attr("height", 45)
+                        .append("circle")
+                        .attr("support", function(ob) {
+                               return ob.sup;
+                          })
+                        .attr("confidence", function(ob) {
+                               return ob.con;
+                          })
+              .attr("lift", function(ob) {
+                               return ob.lift;
+                          })
+                        .attr("cx",30)
+                        .attr("cy",22.5)
+                        .attr("r", function(d) { 
+                        if(d.sup == 0||d.sup == null){ return 0;}else if(d.sup >0.2){return 21;}else{ return d.sup * 100; }
+                        })
+                        .attr("fill",function(d){
+                             if(d.con ==null){return 0;}else if (d.con <=0.6) {return compute(d.con-0.5);} 
+                              else if (d.con>=0.6&&d.con <=0.7) {return compute(d.con-0.3);}  else if (d.con>=0.7&&
+                                d.con <=0.8) {return compute(d.con-0.1);} else { return compute(d.con);}  }
+                        )
+                        .on("mouseover",function(d){  
+                                tooltip.html("support: " +d.sup.substring(0, 5) +"<br />"+"confidence: " + d.con.substring(0, 5)+"<br />"+"lift:"+d.lift.substring(0, 5)) 
+                                     .style("left", (d3.event.pageX) + "px")  
+                                     .style("top", (d3.event.pageY - 60) + "px")  
+                                     .style("opacity",1.0);  
+                                d3.select(this)
+                                  .attr("r",function(d) {  
+                                            if(d.sup == 0||d.sup == null){ return 0;}else if(d.sup >0.2){return 21;}else{ return d.sup * 100; }
+                                                         }) ;
+                                var myDate=new Date();
+                                console.log("mouseover dot information"+d.ru +'//'+  d.yt+" time:"+myDate.toLocaleString());////////////////
+                           })                    
+                       .on("mouseout",function(d){  
+    /* 鼠标移出时，将透明度设定为0.0（完全透明）*/  
+                                    d3.select(this)
+                                      .attr("r",function(d) {  
+                                            if(d.sup == 0||d.sup == null){ return 0;}else if(d.sup >0.2){return 21;}else{ return d.sup * 100; }
+                                                            });
+                                    tooltip.style("opacity",0.0);  
+                           });
+                                                   
+            //点击一行响应
+            tr.on("click.first",rule_click)
+              .on("click.second",function(){
+                d3.selectAll("tr").style("color","black");
+                d3.select(this).style("color","orange")
+              });
+            
+
+    }
+     }) };
+
+</script>
+
+
+
+</body>
+</html>

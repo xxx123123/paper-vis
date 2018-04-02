@@ -1,0 +1,5 @@
+,rule,Def,support1,confidence1,lift1,support2,confidence2,lift2,support3,confidence3,lift3,support4,confidence4,lift4,support5,confidence5,lift5,support6,confidence6,lift6,support7,confidence7,lift7
+109,"N1, Alc1->D-1, I4","numfatal=1, alcres=Yes->druginv=Blank, injury=Fatal Injury (K)",,,,0.053447891,0.50795334,1.7873097119999999,,,,0.05384351,0.5304740410000001,1.8596417269999999,0.057489792000000005,0.517909003,1.845906236,,,,,,
+143,"A1, Alc1->D-1, I4","atmcond=Clear, alcres=Yes->druginv=Blank, injury=Fatal Injury (K)",,,,,,,,,,,,,,,,0.05747025099999999,0.5,1.778213166,0.077393655,0.5,1.7590090090000001
+225,"S1, Alc1->D-1, I4","sex=Male, alcres=Yes->druginv=Blank, injury=Fatal Injury (K)",,,,,,,,,,,,,0.052224371,0.522580645,1.862556677,,,,0.082230758,0.505244755,1.777460152
+382,"Alc1->D-1, I4","alcres=Yes->druginv=Blank, injury=Fatal Injury (K)",,,,0.058357509,0.509746589,1.7936195240000001,,,,0.059686104000000004,0.535457348,1.877111323,0.063829787,0.527531083,1.88020079,0.074834729,0.5035587189999999,1.790869488,0.100369896,0.5086517660000001,1.789446079

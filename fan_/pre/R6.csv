@@ -1,0 +1,2 @@
+,rule,Def,support1,confidence1,lift1,support2,confidence2,lift2,support3,confidence3,lift3,support4,confidence4,lift4,support5,confidence5,lift5,support6,confidence6,lift6,support7,confidence7,lift7
+227,R6->I4,rfun=Rural-Local Road or Street->injury=Fatal Injury (K),0.051907604,0.539083558,1.213961981,,,,,,,,,,,,,,,,0.051429790999999996,0.550647372,1.255636782

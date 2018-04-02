@@ -1,0 +1,20 @@
+key,value,vaa
+0,A1,A1 atmcond=Clear
+1,Ag3,Ag3 age=20-30
+2,Ag4,Ag4 age=30-45
+3,Ag5,Ag5 age=45+
+4,Alc0,Alc0 alcres=No
+5,Alc1,Alc1 alcres=Yes
+6,D0,D0 druginv=No(drugs not involved)
+7,D-1,D-1 druginv=Blank
+8,F1,F1 fhevent=Rollover/Overturn
+9,F12,F12 fhevent=Motor Vehicle In-Transport
+10,F8,F8 fhevent=Pedestrian
+11,N1,N1 numfatal=1
+12,N2,N2 numfatal=2
+13,P1,P1 ptype=Driver of a Motor Vehicle In-Transport
+14,P5,P5 ptype=Pedestrian
+15,R4,R4 rfun=Rural-Major Collector
+16,R6,R6 rfun=Rural-Local Road or Street
+17,S1,S1 sex=Male
+18,S2,S2 sex=Fenale

@@ -1,0 +1,16 @@
+,rule,Def,support1,confidence1,lift1,support2,confidence2,lift2,support3,confidence3,lift3,support4,confidence4,lift4,support5,confidence5,lift5,support6,confidence6,lift6,support7,confidence7,lift7
+41,"Ag3, Alc1->N1, I4","age=20-30, alcres=Yes->numfatal=1, injury=Fatal Injury (K)",0.053551345,0.64884696,1.753980826,,,,,,,,,,,,,,,,,,
+75,"N1, P1, Ag3->I4","numfatal=1, ptype=Driver of a Motor Vehicle In-Transport, age=20-30->injury=Fatal Injury (K)",0.071199931,0.511180124,1.151126253,,,,,,,,,,,,,,,,0.06643903799999999,0.508161045,1.15875555
+123,"N1, A1, P1, Ag3->I4","numfatal=1, atmcond=Clear, ptype=Driver of a Motor Vehicle In-Transport, age=20-30->injury=Fatal Injury (K)",0.05337832,0.503673469,1.134222021,,,,,,,,,,,,,,,,0.052852468,0.513121547,1.170066944
+129,"S1, Ag3, Alc1->I4","sex=Male, age=20-30, alcres=Yes->injury=Fatal Injury (K)",0.054070420999999994,0.773514851,1.741877687,,,,,,,,,,,,,,,,,,
+139,"N1, Ag3, Alc1->I4","numfatal=1, age=20-30, alcres=Yes->injury=Fatal Injury (K)",0.053551345,0.7699004979999999,1.733738525,,,,,,,,,,,,,,,,,,
+152,"S1, P1, Ag3->I4","sex=Male, ptype=Driver of a Motor Vehicle In-Transport, age=20-30->injury=Fatal Injury (K)",0.067479886,0.546218487,1.230029124,,,,,,,,,,,,,,,,0.061601935,0.544311754,1.241189721
+186,"S1, Ag3->I4","sex=Male, age=20-30->injury=Fatal Injury (K)",0.09801886,0.501549358,1.129438736,,,,,,,,,,,,,,,,,,
+226,"Ag3, Alc1->S1, I4","age=20-30, alcres=Yes->sex=Male, injury=Fatal Injury (K)",0.054070420999999994,0.655136268,2.0384172609999998,,,,,,,,,,,,,,,,,,
+235,"N1, S1, P1, Ag3->I4","numfatal=1, sex=Male, ptype=Driver of a Motor Vehicle In-Transport, age=20-30->injury=Fatal Injury (K)",0.059953282999999996,0.543103448,1.2230143690000002,,,,,,,,,,,,,,,,0.05527102,0.544880785,1.24248728
+299,"P1, Ag3->I4","ptype=Driver of a Motor Vehicle In-Transport, age=20-30->injury=Fatal Injury (K)",0.080802838,0.5186007770000001,1.167836818,,,,,,,,,,,,,,,,0.075117371,0.513868613,1.171770473
+328,"A1, P1, Ag3->I4","atmcond=Clear, ptype=Driver of a Motor Vehicle In-Transport, age=20-30->injury=Fatal Injury (K)",0.060126309,0.508040936,1.144057116,,,,,,,,,,,,,,,,0.05875658,0.513362337,1.170616015
+396,"A1, S1, P1, Ag3->I4","atmcond=Clear, sex=Male, ptype=Driver of a Motor Vehicle In-Transport, age=20-30->injury=Fatal Injury (K)",0.05078294,0.541013825,1.2183087479999999,,,,,,,,,,,,,,,,,,
+410,"D-1, S1, Ag3->I4","druginv=Blank, sex=Male, age=20-30->injury=Fatal Injury (K)",0.063846353,0.50101833,1.128242914,,,,,,,,,,,,,,,,0.058543178,0.500912964,1.14222781
+419,"Ag3, Alc1->I4","age=20-30, alcres=Yes->injury=Fatal Injury (K)",0.06419240400000001,0.7777777779999999,1.751477369,,,,,,,,,,,,,,,,0.054915350999999994,0.7805864509999999,1.7799650169999999
+422,"A1, S1, Ag3->I4","atmcond=Clear, sex=Male, age=20-30->injury=Fatal Injury (K)",0.073795311,0.502651738,1.131921185,,,,,,,,,,,,,,,,0.068715322,0.503125,1.147271898

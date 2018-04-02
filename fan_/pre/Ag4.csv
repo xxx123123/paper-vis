@@ -1,0 +1,5 @@
+,rule,Def,support1,confidence1,lift1,support2,confidence2,lift2,support3,confidence3,lift3,support4,confidence4,lift4,support5,confidence5,lift5,support6,confidence6,lift6,support7,confidence7,lift7
+46,"N1, S1, P1, Ag4->I4","numfatal=1, sex=Male, ptype=Driver of a Motor Vehicle In-Transport, age=30-45->injury=Fatal Injury (K)",0.050696427,0.511790393,1.152500517,,,,,,,,,,,,,,,,,,
+205,"A1, S1, Ag4->I4","atmcond=Clear, sex=Male, age=30-45->injury=Fatal Injury (K)",0.055887187000000005,0.505477308,1.138284085,,,,,,,,,,,,,,,,0.057902972999999996,0.5,1.140145985
+347,"N1, A1, S1, Ag4->I4","numfatal=1, atmcond=Clear, sex=Male, age=30-45->injury=Fatal Injury (K)",0.050696427,0.503869304,1.13466302,,,,,,,,,,,,,,,,,,
+409,"S1, P1, Ag4->I4","sex=Male, ptype=Driver of a Motor Vehicle In-Transport, age=30-45->injury=Fatal Injury (K)",0.055108573,0.512057878,1.153102866,,,,,,,,,,,,,,,,,,

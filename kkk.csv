@@ -1,0 +1,8 @@
+key,value,vaa
+0,A1,A1 atmcond=Clear
+1,D-1,D-1 druginv=Blank
+2,F8,F8 fhevent=Pedestrian
+3,I4,I4 injury=Fatal Injury (K)
+4,N1,N1 numfatal=1
+5,P1,P1 ptype=Driver of a Motor Vehicle In-Transport
+6,S1,S1 sex=Male
